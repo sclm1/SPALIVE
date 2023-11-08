@@ -66,7 +66,7 @@ if(check.match(/error-link/g)){
     console.log(shopId)
     const itemId =  await obj.itemid
     console.log(itemId)
-    ctx.reply(`Đang thực hiện tác vụ... ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"})
+    //ctx.reply(`Đang thực hiện tác vụ... ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"})
     while (retryCount < maxRetries) {
       try { 
 
