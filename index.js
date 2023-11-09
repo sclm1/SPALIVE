@@ -121,7 +121,7 @@ const getLive =  await fetch("https://api.bloggiamgia.vn/api/amusement/get-shop-
                         }
                         , parse_mode: "HTML"});
                         } else {
-                        ctx.reply(`Sản phẩm hiện chưa có sẵn tag Live! ${tagName}\n Thử lại nha!`,{parse_mode: "HTML"} )  
+                        ctx.reply(`Sản phẩm hiện chưa có sẵn tag Live! ${tagName}\n Thử lại nha!`,{message_thread_id: threadID, parse_mode: "HTML"} )  
                         }
                       })
 
