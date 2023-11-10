@@ -77,7 +77,7 @@ if(check.match(/error-link/g)){
           return new Promise((r, _) => r())
         }
         console.log("đang lên")
-        sleep(5000 * 1).then(() => console.log("awake"))
+        sleep(3000 * 1).then(() => console.log("awake"))
 
                         //addlive   
 const getLive =  await fetch("https://api.bloggiamgia.vn/api/amusement/get-shop-live-product", {
