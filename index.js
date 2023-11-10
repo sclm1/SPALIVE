@@ -9,11 +9,11 @@ const bot = new Bot(process.env.BOT_TOKEN);
 bot.command('start', async (ctx) => {
     const chatId = ctx.message.chat.id
     if (chatId != "-1001959268889") {
-      ctx.replyWithPhoto("https://ibb.co/6NCCXYc", {caption: `<i><b>Để sử dụng được công cụ - Bạn làm theo các bước sau đây!</b></i>
+      ctx.replyWithPhoto("https://ibb.co/ZB8bkxW", {caption: `<i><b>Để sử dụng được công cụ - Bạn làm theo các bước sau đây!</b></i>
       \n<b>Bước 1:</b> Tìm đến trang sản phẩm bạn muốn truy vấn.
       \n<b>Bước 2:</b> Nhấn nút chia sẻ sản phẩm (như hình) và copy link chia sẻ sản phẩm.
-      \n<b>Bước 3:</b> Tham gia group https://t.me/CoNenChotDon và paste link sản phẩm vô chat, rồi ấn Gửi.
-      \n<b>Bước 4:</b> Chờ đợi kết quả từ phía máy chủ và xem xét giá sản phẩm!`, parse_mode: "HTML"})
+      \n<b>Bước 3:</b> Tham gia group https://t.me/CoNenChotDon và paste link sản phẩm vô Giỏ Live, rồi ấn Gửi.
+      \n<b>Bước 4:</b> Chờ đợi máy chủ hoàn thành add giỏ live!!`, parse_mode: "HTML"})
     } 
   });
   
