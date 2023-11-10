@@ -35,7 +35,7 @@ bot.command('start', async (ctx) => {
             const url = message.match(linkRegex)[0]
             if (pee.test(url)){
                 let retryCount = 0;
-                const maxRetries = 5;
+                const maxRetries = 8;
     
                       const addlive = await fetch("https://api.bloggiamgia.vn/api/amusement/add-shop-live-cart", {
                         "headers": {
@@ -77,7 +77,7 @@ if(check.match(/error-link/g)){
           return new Promise((r, _) => r())
         }
         console.log("đang lên")
-        sleep(20000 * 1).then(() => console.log("awake"))
+        sleep(3000 * 1).then(() => console.log("awake"))
 
                         //addlive   
 const getLive =  await fetch("https://api.bloggiamgia.vn/api/amusement/get-shop-live-product", {
