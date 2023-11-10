@@ -27,7 +27,7 @@ bot.command('start', async (ctx) => {
     // const messID = ctx.message.message_id
     console.log(chatId + " - " + fromID) 
     const tagName = `<a href="tg://user?id=${fromID}">${fullName}</a>`
-    if (chatId == "5229925261" || chatId == "-1002055429078" && threadID == "1464") {
+    if (chatId == "5229925261" || chatId == "-1001959268889" && threadID == "1464") {
         const message = ctx.message.text;
         const linkRegex = /(https?:\/\/[^\s]+)/;
         const pee = /https:\/\/sh/;
