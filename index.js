@@ -98,13 +98,13 @@ const getLive =  await fetch("https://api.bloggiamgia.vn/api/amusement/get-shop-
                         "body": `{\"shopid\":\"${shopId}\",\"itemid\":\"${itemId}\"}`,
                         "method": "POST"
                         }).then(response => response.text())
-                        .then(data => {
+                        .then(async (data) => {
                           console.log(data)
-                        const listItem = JSON.parse(data).recommendLivestreams
-                        const items = listItem.map((item) => [item.product.itemid, item.product.shopid,
+                        const listItem = await JSON.parse(data).recommendLivestreams
+                        const items = await listItem.map((item) => [item.product.itemid, item.product.shopid,
                         item.product.liveid, item.product.indexInLive, item.product.name, item.product.image])
                         //console.log(items)
-                        const target = items.filter((z) => z[0] === itemId)
+                        const target = await items.filter((z) => z[0] === itemId)
                         if (target.length >= 1) {
                           const link = `https://shope.ee/an_redir?origin_link=${encodeURIComponent(`https://shopee.vn/SHOPEE-ALIVE-i.${shopId}.${itemId}`)}&affiliate_id=17384020006&sub_id=productsLive`
                           console.log(link)
@@ -113,7 +113,7 @@ const getLive =  await fetch("https://api.bloggiamgia.vn/api/amusement/get-shop-
                          ctx.replyWithPhoto(`https://down-vn.img.susercontent.com/${target[0][5]}`,{caption: strMess, message_thread_id: threadID, reply_markup: {
                         inline_keyboard: [
                         /* Inline buttons. 2 side-by-side */
-                        [ { text: "💯 Đến Giỏ Live Ngay 💯", url: `https://shopee.vn/universal-link?redir=${encodeURIComponent('https://live.shopee.vn/middle-page?type=live&id=')}${target[0][2]}?utm_source=an_17384020006&utm_medium=affiliates&utm_campaign=-&utm_content=tagsLive----&utm_term=a6611vbxz7fm` }],
+                        [ { text: "💯 Đến Giỏ Live Ngay 💯", url: `https://shope.ee/an_redir?origin_link=${encodeURIComponent('https://live.shopee.vn/middle-page?type=live&id=')}${target[0][2]}&affiliate_id=17384020006&sub_id=tagsLive` }],
             
                         /* One button */
                         //[ { text: "❓Hướng Dẫn", url: "https://t.me/ChotDonBot" }, { text: "🔥 15 Voucher 50K", url: "https://www.facebook.com/groups/salelameofficial/"}]
