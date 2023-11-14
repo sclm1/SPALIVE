@@ -100,11 +100,11 @@ const getLive =  await fetch("https://api.bloggiamgia.vn/api/amusement/get-shop-
                         }).then(response => response.text())
                         .then(data => {
                           console.log(data)
-                        const listItem = await JSON.parse(data).recommendLivestreams
-                        const items = await listItem.map((item) => [item.product.itemid, item.product.shopid,
+                        const listItem = JSON.parse(data).recommendLivestreams
+                        const items = listItem.map((item) => [item.product.itemid, item.product.shopid,
                         item.product.liveid, item.product.indexInLive, item.product.name, item.product.image])
                         //console.log(items)
-                        const target = await items.filter((z) => z[0] === itemId)
+                        const target = items.filter((z) => z[0] === itemId)
                         if (target.length >= 1) {
                           const link = `https://shope.ee/an_redir?origin_link=${encodeURIComponent(`https://shopee.vn/SHOPEE-ALIVE-i.${shopId}.${itemId}`)}&affiliate_id=17384020006&sub_id=productsLive`
                           console.log(link)
