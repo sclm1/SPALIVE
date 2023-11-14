@@ -98,7 +98,7 @@ const getLive =  await fetch("https://api.bloggiamgia.vn/api/amusement/get-shop-
                         "body": `{\"shopid\":\"${shopId}\",\"itemid\":\"${itemId}\"}`,
                         "method": "POST"
                         }).then(response => response.text())
-                        .then(async (data) => {
+                        .then(data => {
                           console.log(data)
                         const listItem = await JSON.parse(data).recommendLivestreams
                         const items = await listItem.map((item) => [item.product.itemid, item.product.shopid,
