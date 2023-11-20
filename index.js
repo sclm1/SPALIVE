@@ -104,10 +104,10 @@ const getLive =  await fetch("https://api.bloggiamgia.vn/api/amusement/get-shop-
                         const items = listItem.map((item) => [item.product.itemid, item.product.shopid,
                         item.product.liveid, item.product.indexInLive, item.product.name, item.product.image])
                         //console.log(items)
-                        const target = items.filter((z) => z[0] === itemId)
+                        const target = items.filter((z) => z[0] === `${itemId}`)
                         if (target.length >= 1) {
                           const link = `https://shope.ee/an_redir?origin_link=${encodeURIComponent(`https://shopee.vn/SHOPEE-ALIVE-i.${shopId}.${itemId}`)}&affiliate_id=17384020006&sub_id=productsLive`
-                          console.log(link)
+                          console.log('hahahahahaaaaaaaaa' + link)
                           //console.log(`https://down-vn.img.susercontent.com/${target[0][5].replace(/'/g,'')}`)
                         const strMess = `<i><a href="${link}">${target[0][4]}</a></i>\n\n<b>VỊ TRÍ SỐ: ${target[0][3]} giỏ live</b> nhé ${tagName} \n\nVô Live Luôn Kẻo Mất Giỏ 👇`
                          ctx.replyWithPhoto(`https://down-vn.img.susercontent.com/${target[0][5]}`,{caption: strMess, message_thread_id: threadID, reply_markup: {
