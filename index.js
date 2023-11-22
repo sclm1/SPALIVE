@@ -120,6 +120,9 @@ const getLive =  await fetch("https://api.bloggiamgia.vn/api/amusement/get-shop-
                         ]
                         }
                         , parse_mode: "HTML"});
+                       
+                            ctx.reply(`1. Các bạn vào sau nếu gửi link không lên giỏ, là chưa mở live nha!\n2. Cứ để lại link cần add giỏ, sản phẩm sẽ tự lên giỏ ở phiên live sau! Có thông báo cho bạn!\n3. Nếu số thứ tự 4 chữ số thì vui lòng để ý kĩ vì hiển thị giỏ bị khuất số!\n4. Nếu vào giỏ bị chậm, không thấy sản phẩm vui lòng gửi lại link, lấy số mới và vô liền!`,{message_thread_id: threadID, parse_mode: "HTML"} )  
+            
                         } else {
                         ctx.reply(`Sản phẩm hiện chưa có sẵn tag Live! ${tagName}\n Thử lại nha!`,{message_thread_id: threadID, parse_mode: "HTML"} )  
                         }
