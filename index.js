@@ -98,29 +98,14 @@ if (liveStream.length > 0 ){
      console.log(live2)     
 
                         //addlive   
-await fetch("https://api.bloggiamgia.vn/api/amusement/get-shop-live-product", {
-                          "headers": {
-                          "accept": "application/json, text/plain, */*",
-                          "accept-language": "en-US,en;q=0.9,vi;q=0.8,zh-CN;q=0.7,zh;q=0.6",
-                          "authorization": "",
-                          "content-type": "application/json",
-                          "sec-ch-ua": "\"Chromium\";v=\"118\", \"Google Chrome\";v=\"118\", \"Not=A?Brand\";v=\"99\"",
-                          "sec-ch-ua-mobile": "?0",
-                          "sec-ch-ua-platform": "\"Windows\"",
-                          "sec-fetch-dest": "empty",
-                          "sec-fetch-mode": "cors",
-                          "sec-fetch-site": "same-site",
-                          "Referer": "https://bloggiamgia.vn/",
-                          "Referrer-Policy": "strict-origin-when-cross-origin"
-                          },
-                          "body": `{\"shopid\":\"${shopId}\",\"itemid\":\"${itemId}\"}`,
-                          "method": "POST"
+await fetch(`https://apiv3.beecost.vn/search/product?timestamp=1701100275545&&product_url=https://shopee.vn/product-i.${shopId}.${itemId}`,{
+                          "method": "GET"
                           }).then(response => response.text())
                         .then(data => {
                           console.log(data)
-                        const listItem = JSON.parse(data).product
+                        const listItem = JSON.parse(data).data.product_base 
                         const name = listItem.name
-                        const img = `https://down-vn.img.susercontent.com/${listItem.image}`
+                        const img = listItem.url_thumbnail
                       
                           const link = `https://shope.ee/an_redir?origin_link=${encodeURIComponent(`https://shopee.vn/SHOPEE-ALIVE-i.${shopId}.${itemId}`)}&affiliate_id=17384020006&sub_id=productsLive2`
                           
@@ -144,30 +129,15 @@ await fetch("https://api.bloggiamgia.vn/api/amusement/get-shop-live-product", {
                       console.log(live1)   
                  
                                          //addlive   
-                 await fetch("https://api.bloggiamgia.vn/api/amusement/get-shop-live-product", {
-                                           "headers": {
-                                           "accept": "application/json, text/plain, */*",
-                                           "accept-language": "en-US,en;q=0.9,vi;q=0.8,zh-CN;q=0.7,zh;q=0.6",
-                                           "authorization": "",
-                                           "content-type": "application/json",
-                                           "sec-ch-ua": "\"Chromium\";v=\"118\", \"Google Chrome\";v=\"118\", \"Not=A?Brand\";v=\"99\"",
-                                           "sec-ch-ua-mobile": "?0",
-                                           "sec-ch-ua-platform": "\"Windows\"",
-                                           "sec-fetch-dest": "empty",
-                                           "sec-fetch-mode": "cors",
-                                           "sec-fetch-site": "same-site",
-                                           "Referer": "https://bloggiamgia.vn/",
-                                           "Referrer-Policy": "strict-origin-when-cross-origin"
-                                           },
-                                           "body": `{\"shopid\":\"${shopId}\",\"itemid\":\"${itemId}\"}`,
-                                           "method": "POST"
-                                           }).then(response => response.text())
-                                         .then(data => {
-                                           console.log(data)
-                                         const listItem = JSON.parse(data).product
-                                         const name = listItem.name
-                                         const img = `https://down-vn.img.susercontent.com/${listItem.image}`
-                                       
+                 
+await fetch(`https://apiv3.beecost.vn/search/product?timestamp=1701100275545&&product_url=https://shopee.vn/product-i.${shopId}.${itemId}`,{
+                          "method": "GET"
+                          }).then(response => response.text())
+                        .then(data => {
+                          console.log(data)
+                        const listItem = JSON.parse(data).data.product_base 
+                        const name = listItem.name
+                        const img = listItem.url_thumbnail
                                            const link = `https://shope.ee/an_redir?origin_link=${encodeURIComponent(`https://shopee.vn/SHOPEE-ALIVE-i.${shopId}.${itemId}`)}&affiliate_id=17384020006&sub_id=productsLive2`
                                            
                                            //console.log(`https://down-vn.img.susercontent.com/${target[0][5].replace(/'/g,'')}`)
