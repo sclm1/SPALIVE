@@ -98,26 +98,27 @@ if (liveStream.length > 0 ){
      console.log(live2)     
 
                         //addlive   
-await fetch("https://voucher.shopeeanalytics.com/vn/", {
+await fetch("https://api.bloggiamgia.vn/api/amusement/brother-battle", {
   "headers": {
-    "accept": "*/*",
+    "accept": "application/json, text/plain, */*",
     "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
-    "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryjvmbTuCoeISmG7bd",
+    "authorization": "",
+    "content-type": "application/json",
     "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\"",
     "sec-ch-ua-mobile": "?1",
     "sec-ch-ua-platform": "\"Android\"",
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "Referer": "https://riokupon.com/",
+    "sec-fetch-site": "same-site",
+    "Referer": "https://bloggiamgia.vn/",
     "Referrer-Policy": "strict-origin-when-cross-origin"
   },
-  "body": `------WebKitFormBoundaryjvmbTuCoeISmG7bd\r\nContent-Disposition: form-data; name=\"query\"\r\n\r\nhttps://riokupon.com/vn/ma-giam-gia/shopee/\r\n------WebKitFormBoundaryjvmbTuCoeISmG7bd\r\nContent-Disposition: form-data; name=\"url\"\r\n\r\n${url}\r\n------WebKitFormBoundaryjvmbTuCoeISmG7bd--\r\n`,
+  "body": `{\"linkProduct\":\"${url}\"}`,
   "method": "POST"
 }).then(response => response.text())
                         .then(data => {
                           console.log(data)
-                        const listItem = JSON.parse(data).data.product_info  
+                        const listItem = JSON.parse(data).data   
                         const name = listItem.name
                         const img = listItem.image
                       
@@ -144,26 +145,26 @@ await fetch("https://voucher.shopeeanalytics.com/vn/", {
                  
                                          //addlive   
                  
-await fetch("https://voucher.shopeeanalytics.com/vn/", {
+await fetch("https://api.bloggiamgia.vn/api/amusement/brother-battle", {
   "headers": {
-    "accept": "*/*",
+    "accept": "application/json, text/plain, */*",
     "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
-    "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryjvmbTuCoeISmG7bd",
+    "authorization": "",
+    "content-type": "application/json",
     "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\"",
     "sec-ch-ua-mobile": "?1",
     "sec-ch-ua-platform": "\"Android\"",
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "Referer": "https://riokupon.com/",
+    "sec-fetch-site": "same-site",
+    "Referer": "https://bloggiamgia.vn/",
     "Referrer-Policy": "strict-origin-when-cross-origin"
   },
-  "body": `------WebKitFormBoundaryjvmbTuCoeISmG7bd\r\nContent-Disposition: form-data; name=\"query\"\r\n\r\nhttps://riokupon.com/vn/ma-giam-gia/shopee/\r\n------WebKitFormBoundaryjvmbTuCoeISmG7bd\r\nContent-Disposition: form-data; name=\"url\"\r\n\r\n${url}\r\n------WebKitFormBoundaryjvmbTuCoeISmG7bd--\r\n`,
+  "body": "{\"linkProduct\":\"https://shp.ee/jpbavax\"}",
   "method": "POST"
-}).then(response => response.text())
-                        .then(data => {
+}).then(data => {
                           console.log(data)
-                        const listItem = JSON.parse(data).data.product_info  
+                        const listItem = JSON.parse(data).data
                         const name = listItem.name
                         const img = listItem.image
                                            const link = `https://shope.ee/an_redir?origin_link=${encodeURIComponent(`https://shopee.vn/SHOPEE-ALIVE-i.${shopId}.${itemId}`)}&affiliate_id=17384020006&sub_id=productsLive2`
