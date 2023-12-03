@@ -160,9 +160,9 @@ await fetch("https://api.bloggiamgia.vn/api/amusement/brother-battle", {
     "Referer": "https://bloggiamgia.vn/",
     "Referrer-Policy": "strict-origin-when-cross-origin"
   },
-  "body": "{\"linkProduct\":\"https://shp.ee/jpbavax\"}",
+  "body": `{\"linkProduct\":\"${url}\"}`,
   "method": "POST"
-}).then(data => {
+}).then(response => response.text()).then(data => {
                           console.log(data)
                         const listItem = JSON.parse(data).data
                         const name = listItem.name
