@@ -37,24 +37,25 @@ bot.command('start', async (ctx) => {
                 let retryCount = 0;
                 const maxRetries = 8;
 
-const addlive1 = await fetch("https://api.bloggiamgia.vn/api/amusement/add-shop-live-cart", {
-                      "headers": {
-                        "accept": "application/json, text/plain, */*",
-                        "accept-language": "en-US,en;q=0.9,vi;q=0.8,zh-CN;q=0.7,zh;q=0.6",
-                        "authorization": "",
-                        "content-type": "application/json",
-                        "sec-ch-ua": "\"Google Chrome\";v=\"119\", \"Chromium\";v=\"119\", \"Not?A_Brand\";v=\"24\"",
-                        "sec-ch-ua-mobile": "?0",
-                        "sec-ch-ua-platform": "\"Windows\"",
-                        "sec-fetch-dest": "empty",
-                        "sec-fetch-mode": "cors",
-                        "sec-fetch-site": "same-site",
-                        "Referer": "https://bloggiamgia.vn/",
-                        "Referrer-Policy": "strict-origin-when-cross-origin"
-                      },
-                      "body": `{\"link\":\"${url}\"}`,
-                      "method": "POST"
-                    })
+const addlive1 = await fetch("https://api.bloggiamgia.vn/api/amusement/brother-battle", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
+    "authorization": "",
+    "content-type": "application/json",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\"",
+    "sec-ch-ua-mobile": "?1",
+    "sec-ch-ua-platform": "\"Android\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
+    "Referer": "https://bloggiamgia.vn/",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "body": `{\"linkProduct\":\"${url}\"}`,
+  "method": "POST"
+})
+
 const check1 = await addlive1.text(); 
 console.log(check1)
 if(check1.match(/error-link/g)){
