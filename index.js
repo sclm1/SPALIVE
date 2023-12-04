@@ -57,7 +57,13 @@ const addlive1 = await fetch("https://api.bloggiamgia.vn/api/amusement/brother-b
 })
 
 const check1 = await addlive1.text(); 
-console.log(check1)
+const infoData = JSON.parse(check1).data
+const name = infoData.name
+const image = infoData.image
+const shopId = Number(infoData.shopid)
+const itemId = infoData.itemid               
+                
+
 if(check1.match(/error-link/g)){
   ctx.reply(`Opps! Có vẻ như đây không phải link sản phẩm! Vui lòng kiểm tra lại nhé! ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"} )
   return next();
@@ -97,30 +103,6 @@ if (liveStream.length > 0 ){
      console.log(live1)
      const live2 = liveStream[1].url.split("?")[0] 
      console.log(live2)     
-
-                        //addlive   
-await fetch("https://voucher.shopeeanalytics.com/vn/", {
-  "headers": {
-    "accept": "*/*",
-    "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
-    "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryjvmbTuCoeISmG7bd",
-    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\"",
-    "sec-ch-ua-mobile": "?1",
-    "sec-ch-ua-platform": "\"Android\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "Referer": "https://riokupon.com/",
-    "Referrer-Policy": "strict-origin-when-cross-origin"
-  },
-  "body": `------WebKitFormBoundaryjvmbTuCoeISmG7bd\r\nContent-Disposition: form-data; name=\"query\"\r\n\r\nhttps://riokupon.com/vn/ma-giam-gia/shopee/\r\n------WebKitFormBoundaryjvmbTuCoeISmG7bd\r\nContent-Disposition: form-data; name=\"url\"\r\n\r\n${url}\r\n------WebKitFormBoundaryjvmbTuCoeISmG7bd--\r\n`,
-  "method": "POST"
-}).then(response => response.text())
-                        .then(data => {
-                          console.log(data)
-                        const listItem = JSON.parse(data).data.product_info  
-                        const name = listItem.name
-                        const img = listItem.image
                       
                           const link = `https://shope.ee/an_redir?origin_link=${encodeURIComponent(`https://shopee.vn/SHOPEE-ALIVE-i.${shopId}.${itemId}`)}&affiliate_id=17384020006&sub_id=productsLive2`
                           
@@ -138,35 +120,12 @@ await fetch("https://voucher.shopeeanalytics.com/vn/", {
                         }
                         , parse_mode: "HTML"});
                         
-                      })
+                      
                     } else {
                       const live1 = liveStream[0].url.split("?")[0]
                       console.log(live1)   
                  
-                                         //addlive   
-                 
-await fetch("https://voucher.shopeeanalytics.com/vn/", {
-  "headers": {
-    "accept": "*/*",
-    "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
-    "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryjvmbTuCoeISmG7bd",
-    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\"",
-    "sec-ch-ua-mobile": "?1",
-    "sec-ch-ua-platform": "\"Android\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "cross-site",
-    "Referer": "https://riokupon.com/",
-    "Referrer-Policy": "strict-origin-when-cross-origin"
-  },
-  "body": `------WebKitFormBoundaryjvmbTuCoeISmG7bd\r\nContent-Disposition: form-data; name=\"query\"\r\n\r\nhttps://riokupon.com/vn/ma-giam-gia/shopee/\r\n------WebKitFormBoundaryjvmbTuCoeISmG7bd\r\nContent-Disposition: form-data; name=\"url\"\r\n\r\n${url}\r\n------WebKitFormBoundaryjvmbTuCoeISmG7bd--\r\n`,
-  "method": "POST"
-}).then(response => response.text())
-                        .then(data => {
-                          console.log(data)
-                        const listItem = JSON.parse(data).data.product_info  
-                        const name = listItem.name
-                        const img = listItem.image
+                                         
                                            const link = `https://shope.ee/an_redir?origin_link=${encodeURIComponent(`https://shopee.vn/SHOPEE-ALIVE-i.${shopId}.${itemId}`)}&affiliate_id=17384020006&sub_id=productsLive2`
                                            
                                            //console.log(`https://down-vn.img.susercontent.com/${target[0][5].replace(/'/g,'')}`)
@@ -182,7 +141,7 @@ await fetch("https://voucher.shopeeanalytics.com/vn/", {
                                          }
                                          , parse_mode: "HTML"});
                                          
-                                       })             
+                                                   
 
                   }
                 }
