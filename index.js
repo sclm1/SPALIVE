@@ -59,7 +59,7 @@ const addlive1 = await fetch("https://api.bloggiamgia.vn/api/amusement/brother-b
 const check1 = await addlive1.text(); 
 const infoData = JSON.parse(check1).data
 const name = infoData.name
-const image = infoData.image
+const img = infoData.image
 const shopId = Number(infoData.shopid)
 const itemId = infoData.itemid               
                 
