@@ -37,31 +37,30 @@ bot.command('start', async (ctx) => {
                 let retryCount = 0;
                 const maxRetries = 8;
 
-const addlive1 = await fetch("https://api.bloggiamgia.vn/api/amusement/brother-battle", {
+const fetch("https://voucherbk.shopeeanalytics.com/vn/", {
   "headers": {
-    "accept": "application/json, text/plain, */*",
+    "accept": "*/*",
     "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
-    "authorization": "",
-    "content-type": "application/json",
+    "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryO7VsDt2ez39VareR",
     "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\"",
     "sec-ch-ua-mobile": "?1",
     "sec-ch-ua-platform": "\"Android\"",
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-site",
-    "Referer": "https://bloggiamgia.vn/",
+    "sec-fetch-site": "cross-site",
+    "Referer": "https://riokupon.com/",
     "Referrer-Policy": "strict-origin-when-cross-origin"
   },
-  "body": `{\"linkProduct\":\"${url}\"}`,
+  "body": `------WebKitFormBoundaryO7VsDt2ez39VareR\r\nContent-Disposition: form-data; name=\"query\"\r\n\r\nhttps://riokupon.com/vn/ma-giam-gia/shopee/\r\n------WebKitFormBoundaryO7VsDt2ez39VareR\r\nContent-Disposition: form-data; name=\"url\"\r\n\r\n${url}\r\n------WebKitFormBoundaryO7VsDt2ez39VareR--\r\n`,
   "method": "POST"
 })
 
 const check1 = await addlive1.text(); 
-const infoData = JSON.parse(check1).data
+const infoData = JSON.parse(check1).data.product_info 
 const name = infoData.name
 const img = infoData.image
-const shopId = Number(infoData.shopid)
-const itemId = infoData.itemid               
+const shopId = infoData.shop_id
+const itemId = infoData.item_id               
                 
 
 if(check1.match(/error-link/g)){
