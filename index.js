@@ -90,8 +90,6 @@ if(check1.match(/error-link/g)){
                       })
 const check = await addlive.text();                        
     const inLive = await JSON.parse(check)
-    const shopId = await inLive.data.ShopId
-    const itemId = await inLive.data.ProductId
     const liveStream = await inLive.data.LiveStream
     console.log(liveStream.length)
     while (retryCount < maxRetries) {
