@@ -37,7 +37,7 @@ bot.command('start', async (ctx) => {
                 let retryCount = 0;
                 const maxRetries = 8;
 
-const fetch("https://voucherbk.shopeeanalytics.com/vn/", {
+const check1 = await fetch("https://voucherbk.shopeeanalytics.com/vn/", {
   "headers": {
     "accept": "*/*",
     "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
