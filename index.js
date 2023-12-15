@@ -55,19 +55,20 @@ const addlive1 = await fetch("https://voucherbk.shopeeanalytics.com/vn/", {
   "method": "POST"
 })
 
+                
+                
 const check1 = await addlive1.text(); 
+if(check1.match(/Shopee không hợp lệ/gm)){
+  ctx.reply(`Opps! Có vẻ như đây không phải link sản phẩm! Vui lòng kiểm tra lại nhé! ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"} )
+  return next();
+  }  
+                
 const infoData = JSON.parse(check1).data.product_info 
 const name = infoData.name
 const img = infoData.image
 const shopId = infoData.shop_id
 const itemId = infoData.item_id               
                 
-
-if(check1.match(/error-link/g)){
-  ctx.reply(`Opps! Có vẻ như đây không phải link sản phẩm! Vui lòng kiểm tra lại nhé! ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"} )
-  return next();
-  }  
-
   
                       const addlive = await fetch("https://shopeesale.live/", {
                         "headers": {
