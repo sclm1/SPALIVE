@@ -63,9 +63,9 @@ if(check1.match(/Shopee không hợp lệ/gm)){
   return next();
   }  
                 
-const infoData = JSON.parse(check1).data.product_info 
+const infoData = await JSON.parse(check1).data.product_info 
 const name = infoData.name
-const img = infoData.image
+const img = `https://quickchart.io/watermark?mainImageUrl=${infoData.image}&markImageUrl=https%3A%2F%2Fi.ibb.co%2F9VWB0v1%2FIMG-20231216-003844-234.jpg&markRatio=0.25&imageWidth=300`
 const shopId = infoData.shop_id
 const itemId = infoData.item_id               
                 
