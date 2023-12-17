@@ -103,8 +103,10 @@ if (liveStream.length > 0 ){
      console.log(live2)     
                       try {
                           const link = `https://shope.ee/an_redir?origin_link=${encodeURIComponent(`https://shopee.vn/SHOPEE-ALIVE-i.${shopId}.${itemId}`)}&affiliate_id=17384020006&sub_id=productsLive2`
-const strMess = `<i><a href="${link}">${name}</a></i>\n\n<b>VỊ TRÍ ĐẦU (1 - 50) giỏ live</b> nhé ${tagName} \n\n<b>Cả 2 live đều được Add nhé!</b>`
-ctx.reply(strMess, {message_thread_id: threadID, reply_markup: {
+                          
+                          //console.log(`https://down-vn.img.susercontent.com/${target[0][5].replace(/'/g,'')}`)
+                        const strMess = `<i><a href="${link}">${name}</a></i>\n\n<b>VỊ TRÍ ĐẦU (1 - 50) giỏ live</b> nhé ${tagName} \n\n<b>Cả 2 live đều được Add nhé!</b>`
+                         ctx.replyWithPhoto(`${img}`,{caption: strMess, message_thread_id: threadID, reply_markup: {
                         inline_keyboard: [
                         /* Inline buttons. 2 side-by-side */
                         [ { text: "💯 Live 1 💯", url: `https://shope.ee/an_redir?origin_link=${encodeURIComponent(live1)}&affiliate_id=17384020006&sub_id=tagsLive2` },
@@ -118,10 +120,8 @@ ctx.reply(strMess, {message_thread_id: threadID, reply_markup: {
                           
                       } catch (err) {
                          const link = `https://shope.ee/an_redir?origin_link=${encodeURIComponent(`https://shopee.vn/SHOPEE-ALIVE-i.${shopId}.${itemId}`)}&affiliate_id=17384020006&sub_id=productsLive2`
-                          
-                          //console.log(`https://down-vn.img.susercontent.com/${target[0][5].replace(/'/g,'')}`)
-                        const strMess = `<i><a href="${link}">${name}</a></i>\n\n<b>VỊ TRÍ ĐẦU (1 - 50) giỏ live</b> nhé ${tagName} \n\n<b>Cả 2 live đều được Add nhé!</b>`
-                         ctx.reply({caption: strMess, message_thread_id: threadID, reply_markup: {
+                          const strMess = `<i><a href="${link}">${name}</a></i>\n\n<b>VỊ TRÍ ĐẦU (1 - 50) giỏ live</b> nhé ${tagName} \n\n<b>Cả 2 live đều được Add nhé!</b>`
+                      ctx.reply(strMess, {message_thread_id: threadID, reply_markup: {
                         inline_keyboard: [
                         /* Inline buttons. 2 side-by-side */
                         [ { text: "💯 Live 1 💯", url: `https://shope.ee/an_redir?origin_link=${encodeURIComponent(live1)}&affiliate_id=17384020006&sub_id=tagsLive2` },
@@ -131,7 +131,7 @@ ctx.reply(strMess, {message_thread_id: threadID, reply_markup: {
                         //[ { text: "❓Hướng Dẫn", url: "https://t.me/ChotDonBot" }, { text: "🔥 15 Voucher 50K", url: "https://www.facebook.com/groups/salelameofficial/"}]
                         ]
                         }
-                        , parse_mode: "HTML"}); 
+                        , parse_mode: "HTML"});
                       }
                         
                       
