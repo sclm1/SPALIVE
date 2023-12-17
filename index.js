@@ -120,6 +120,10 @@ if (liveStream.length > 0 ){
                         , parse_mode: "HTML"}); 
                           
                       } catch (err) {
+           const live1 = liveStream[0].url.split("?")[0]
+     console.log(live1)
+     const live2 = liveStream[1].url.split("?")[0] 
+     console.log(live2)    
                          const link = `https://shope.ee/an_redir?origin_link=${encodeURIComponent(`https://shopee.vn/SHOPEE-ALIVE-i.${shopId}.${itemId}`)}&affiliate_id=17384020006&sub_id=productsLive2`
                           const strMess = `<i><a href="${link}">${name}</a></i>\n\n<b>VỊ TRÍ ĐẦU (1 - 50) giỏ live</b> nhé ${tagName} \n\n<b>Cả 2 live đều được Add nhé!</b>`
                       ctx.reply(strMess, {message_thread_id: threadID, reply_markup: {
