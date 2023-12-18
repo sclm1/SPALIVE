@@ -117,7 +117,8 @@ ctx.reply(strMess, {message_thread_id: threadID, reply_markup: {
                         //[ { text: "❓Hướng Dẫn", url: "https://t.me/ChotDonBot" }, { text: "🔥 15 Voucher 50K", url: "https://www.facebook.com/groups/salelameofficial/"}]
                         ]
                         }
-                        , parse_mode: "HTML"});
+                        , parse_mode: "HTML"}); 
+      return next();
                       
 
       
