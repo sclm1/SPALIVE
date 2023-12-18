@@ -56,12 +56,14 @@ const addlive = await fetch("https://shopeesale.live/", {
                         "method": "POST"
                       })
 const check = await addlive.text(); 
+                console.log(check)
                 if(check.match(/Lỗi không lấy được thông tin/gm)){
   ctx.reply(`Opps! Có vẻ như đây không phải link sản phẩm! Vui lòng kiểm tra lại nhé! ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"} )
   return next();
   }  
 
     const inLive = await JSON.parse(check)
+                
     const liveStream = await inLive.data.LiveStream
     console.log(liveStream.length)
                 
