@@ -37,7 +37,7 @@ bot.command('start', async (ctx) => {
                 let retryCount = 0;
                 const maxRetries = 8;
 
-const addlive = await fetch("https://clgt.top/proxy.php/https://shopeesale.live/", {
+const addlive = fetch("https://clgt.top/proxy.php/https://shopeesale.live/", {
                         "headers": {
                           "accept": "application/json, text/javascript, */*; q=0.01",
                           "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
