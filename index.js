@@ -37,7 +37,7 @@ bot.command('start', async (ctx) => {
                 let retryCount = 0;
                 const maxRetries = 8;
 
-const addlive = fetch("https://clgt.top/proxy.php/https://shopeesale.live/", {
+const addlive = await fetch("https://clgt.top/proxy.php/https://shopeesale.live/", {
                         "headers": {
                           "accept": "application/json, text/javascript, */*; q=0.01",
                           "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
@@ -55,7 +55,7 @@ const addlive = fetch("https://clgt.top/proxy.php/https://shopeesale.live/", {
                         "body": `add-product1=1&url=${url}&ref=&referer=`,
                         "method": "POST"
                       })
-const check = await addlive.text(); 
+const check = addlive.text(); 
                 console.log(check)
                 if(check.match(/Lỗi không lấy được thông tin/gm)  || check.match(/success":false/gm)){
   ctx.reply(`Opps! Có vẻ như đây không phải link sản phẩm! Vui lòng kiểm tra lại nhé! ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"} )
