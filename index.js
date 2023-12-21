@@ -37,7 +37,7 @@ bot.command('start', async (ctx) => {
                 let retryCount = 0;
                 const maxRetries = 8;
 
-const addlive = fetch("https://shopeesale.live", {
+const addlive = fetch("https://clgt.top/proxy.php/https://shopeesale.live/", {
                         "headers": {
                           "accept": "application/json, text/javascript, */*; q=0.01",
                           "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
@@ -49,7 +49,7 @@ const addlive = fetch("https://shopeesale.live", {
                           "sec-fetch-mode": "cors",
                           "sec-fetch-site": "same-origin",
                           "x-requested-with": "XMLHttpRequest",
-                          "Referer": "https://shopeesale.live/",
+                          "Referer": "https://clgt.top/proxy.php/https://shopeesale.live/",
                           "Referrer-Policy": "strict-origin-when-cross-origin"
                         },
                         "body": `add-product1=1&url=${url}&ref=&referer=`,
