@@ -55,7 +55,7 @@ const addlive = await fetch("https://clgt.top/proxy.php/https://shopeesale.live/
                         "body": `add-product1=1&url=${url}&ref=&referer=`,
                         "method": "POST"
                       })
-const check = addlive.text(); 
+const check = await addlive.text(); 
                 console.log(check)
                 if(check.match(/Lỗi không lấy được thông tin/gm)  || check.match(/success":false/gm)){
   ctx.reply(`Opps! Có vẻ như đây không phải link sản phẩm! Vui lòng kiểm tra lại nhé! ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"} )
