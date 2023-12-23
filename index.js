@@ -60,7 +60,7 @@ bot.command('start', async (ctx) => {
 
 .then(response => response.text()).
 then(data => {
-  if(data.match(/Lỗi không lấy được thông tin/gm)  || data.match(/success":false/gm)){
+  if(data.match(/Lỗi không lấy được thông tin/gm)  ){
     ctx.reply(`Opps! Có vẻ như đây không phải link sản phẩm! Vui lòng kiểm tra lại nhé! ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"} )
     return next();
     }   
