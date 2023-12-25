@@ -121,7 +121,7 @@ then(data => {
     if (retryCount === maxRetries) {
     ctx.reply(`Máy chủ gặp sự cố trong quá trình truy xuất, hãy thử lại nhé! ${tagName}`,{parse_mode: "HTML"} )
     // Handle the case when the maximum number of retries is reached
-    await ctx.deleteMessage(message.message_id); 
+   // await ctx.deleteMessage(message.message_id); 
                   }
 
                 }
