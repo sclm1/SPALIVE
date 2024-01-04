@@ -69,9 +69,9 @@ then(data => {
   
       if(liveStream.length === 2){
     
-         const live1 = liveStream[0].url.split("?")[0]
+         const live1 = liveStream[0].url.split("redir=")[1]
          console.log(live1)
-         const live2 = liveStream[1].url.split("?")[0] 
+         const live2 = liveStream[1].url.split("redir=")[1] 
          console.log(live2)     
                          
                              
@@ -79,8 +79,8 @@ then(data => {
     ctx.reply(strMess, {message_thread_id: threadID, reply_markup: {
                             inline_keyboard: [
                             /* Inline buttons. 2 side-by-side */
-                            [ { text: "💯 Live 1 💯", url: `https://shope.ee/an_redir?origin_link=${encodeURIComponent(live1)}&affiliate_id=17384020006&sub_id=tagsLive2` },
-                            { text: "💯 Live 2 💯", url: `https://shope.ee/an_redir?origin_link=${encodeURIComponent(live2)}&affiliate_id=17384020006&sub_id=tagsLive2` }],
+                            [ { text: "💯 Live 1 💯", url: `https://shope.ee/an_redir?origin_link=${decodeURIComponent(live1)}&affiliate_id=17384020006&sub_id=tagsLive2` },
+                            { text: "💯 Live 2 💯", url: `https://shope.ee/an_redir?origin_link=${decodeURIComponent(live2)}&affiliate_id=17384020006&sub_id=tagsLive2` }],
                 
                             /* One button */
                             //[ { text: "❓Hướng Dẫn", url: "https://t.me/ChotDonBot" }, { text: "🔥 15 Voucher 50K", url: "https://www.facebook.com/groups/salelameofficial/"}]
@@ -89,13 +89,13 @@ then(data => {
                             , parse_mode: "HTML"}); 
           return next();
                           } else {
-                      const live1 = liveStream[0].url.split("?")[0]
+                      const live1 = liveStream[0].url.split("redir=")[1]
                       console.log(live1) 
                       const strMess = `<b>VỊ TRÍ ĐẦU (1 - 50) giỏ live</b> nhé ${tagName}`
     ctx.reply(strMess, {message_thread_id: threadID, reply_markup: {
     inline_keyboard: [
                       /* Inline buttons. 2 side-by-side */
-                      [ { text: "💯 Xem Ngay 💯", url: `https://shope.ee/an_redir?origin_link=${encodeURIComponent(live1)}&affiliate_id=17384020006&sub_id=tagsLive2` }],
+                      [ { text: "💯 Xem Ngay 💯", url: `https://shope.ee/an_redir?origin_link=${decodeURIComponent(live1)}&affiliate_id=17384020006&sub_id=tagsLive2` }],
           
                       /* One button */
                       //[ { text: "❓Hướng Dẫn", url: "https://t.me/ChotDonBot" }, { text: "🔥 15 Voucher 50K", url: "https://www.facebook.com/groups/salelameofficial/"}]
