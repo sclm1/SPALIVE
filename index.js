@@ -79,7 +79,7 @@ then(data => {
     ctx.reply(strMess, {message_thread_id: threadID, reply_markup: {
                             inline_keyboard: [
                             /* Inline buttons. 2 side-by-side */
-                            [ { text: "💯 Live 1 💯", url: `https://shope.ee/an_redir?origin_link=${encodeURIComponent(live1)}&affiliate_id=17384020006&sub_id=tagsLive2` },
+                            [ { text: "💯 Live 1 💯", url: `https://shope.ee/an_redir?origin_link=${encodeURIComponent(live1)}&affiliate_id=17384020006&sub_id=tagsLive2` }, { text: "💯 Add Video 💯", url: "https://t.me/CoNenChotDon/14113" },
                             { text: "💯 Live 2 💯", url: `https://shope.ee/an_redir?origin_link=${encodeURIComponent(live2)}&affiliate_id=17384020006&sub_id=tagsLive2` }],
                 
                             /* One button */
@@ -95,7 +95,7 @@ then(data => {
     ctx.reply(strMess, {message_thread_id: threadID, reply_markup: {
     inline_keyboard: [
                       /* Inline buttons. 2 side-by-side */
-                      [ { text: "💯 Xem Ngay 💯", url: `https://shope.ee/an_redir?origin_link=${encodeURIComponent(live1)}&affiliate_id=17384020006&sub_id=tagsLive2` }],
+                      [ { text: "💯 Xem Ngay 💯", url: `https://shope.ee/an_redir?origin_link=${encodeURIComponent(live1)}&affiliate_id=17384020006&sub_id=tagsLive2` }, { text: "💯 Add Video 💯", url: "https://t.me/CoNenChotDon/14113" }],
           
                       /* One button */
                       //[ { text: "❓Hướng Dẫn", url: "https://t.me/ChotDonBot" }, { text: "🔥 15 Voucher 50K", url: "https://www.facebook.com/groups/salelameofficial/"}]
