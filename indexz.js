@@ -62,10 +62,15 @@ if(check.match(/error-link/g)){
     return next();
     }                         
     const obj = await JSON.parse(check)
+    const itemId =  await obj.itemid
+    //console.log(itemId)
+     if(itemId.length == 0){
+    ctx.reply(`Opps! Có vẻ như đây không phải link sản phẩm! Vui lòng kiểm tra lại nhé! ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"} )
+    return next();
+     }           
     const shopId =  await obj.shopid
     console.log(shopId)
-    const itemId =  await obj.itemid
-    console.log(itemId)
+    
     //ctx.reply(`Đang thực hiện tác vụ... ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"})
     while (retryCount < maxRetries) {
       try { 
