@@ -35,7 +35,7 @@ bot.command('start', async (ctx) => {
             const url = message.match(linkRegex)[0]
             if (pee.test(url)){
                 let retryCount = 0;
-                const maxRetries = 8;
+                const maxRetries = 50;
                 while (retryCount < maxRetries) {
                 try {
                   
