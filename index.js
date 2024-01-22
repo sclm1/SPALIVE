@@ -61,6 +61,11 @@ bot.command('start', async (ctx) => {
 .then(response => response.text()).
 then(data => {
     console.log(data)
+ if(data.match(/khi th/gm)){
+    ctx.reply(`Lỗi không mong muốn! Gửi lại nhé! ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"} )
+    return next();
+ }   
+    
   if(data.match(/ProductId":""/gm)  ){
     ctx.reply(`Opps! Có vẻ như đây không phải link sản phẩm! Vui lòng kiểm tra lại nhé! ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"} )
     return next();
