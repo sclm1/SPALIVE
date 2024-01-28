@@ -72,7 +72,7 @@ then(data => {
     ctx.reply(`Opps! Có vẻ như đây không phải link sản phẩm! Vui lòng kiểm tra lại nhé! ${tagName}`, {message_thread_id: threadID, parse_mode: "HTML"} )
     return next();
     }   
-    const liveStream = JSON.parse(data).data.LiveStream 
+    const liveStream = JSON.parse(data).data.LiveStream
     if (liveStream.length > 0 ){
   
       if(liveStream.length === 2){
