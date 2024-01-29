@@ -39,7 +39,7 @@ bot.command('start', async (ctx) => {
                 while (retryCount < maxRetries) {
                 try {
                   
- await fetch("https://clgt.top/proxy.php/https://shopeesale.live/", {
+ await fetch("https://shopeesale.live/", {
                     "headers": {
         "accept": "application/json, text/javascript, */*; q=0.01",
         "accept-language": "en-US,en;q=0.9,vi;q=0.8,zh-CN;q=0.7,zh;q=0.6",
