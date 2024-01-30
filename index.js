@@ -39,26 +39,25 @@ bot.command('start', async (ctx) => {
                 while (retryCount < maxRetries) {
                 try {
                   
- await fetch("https://clgt.top/proxy.php/https://shopeesale.live/", {
-                    "headers": {
-        "accept": "application/json, text/javascript, */*; q=0.01",
-        "accept-language": "en-US,en;q=0.9,vi;q=0.8,zh-CN;q=0.7,zh;q=0.6",
-        "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-        "sec-ch-ua": "\"Not A(Brand\";v=\"99\", \"Google Chrome\";v=\"121\", \"Chromium\";v=\"121\"",
-        "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": "\"Windows\"",
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-origin",
-        "x-requested-with": "XMLHttpRequest"
-      },
-      "referrer": "https://shopeesale.live/",
-      "referrerPolicy": "strict-origin-when-cross-origin",
-                    "body": `add-product1=1&url=${encodeURIComponent(url)}&ref=&referer=`,
-                    "method": "POST",
-      "mode": "cors",
-      "credentials": "include"
-    })
+ await fetch("https://p4.hosteagle.club/?__cpo=aHR0cHM6Ly9zYW5zaG9wZWUubmV0", {
+  "headers": {
+    "accept": "application/json, text/javascript, */*; q=0.01",
+    "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\"",
+    "sec-ch-ua-mobile": "?1",
+    "sec-ch-ua-platform": "\"Android\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest",
+    "cookie": "__cpc=Q05rb0oxUjA5WmtybzZ6LzBIOGt0dHh4a0tRcnhIOVNhSHlqUlFOZlRKU05WdXZYdWJ1c0ZwN1hSSC9ZbVczNVRFSWg2M0puWWVJNmJlOXJoZ0xnR2h6TlZxb1dhaUhkYmRPeHhjbXFxL1IrVGFlWTJXbHlXRGJ3ekJybGhiWk0=; __cpcPopShown=1; __cpcStatSampleNum=1",
+    "Referer": "https://p4.hosteagle.club/gan-tag-shopee-live-p1.html?__cpo=aHR0cHM6Ly9zYW5zaG9wZWUubmV0",
+    "Referrer-Policy": "no-referrer-when-downgrade"
+  },
+  "body": `add-product1=1&url=${encodeURIComponent(url)}&ref=&referer=`,
+  "method": "POST"
+})
 
 .then(response => response.text()).
 then(data => {
