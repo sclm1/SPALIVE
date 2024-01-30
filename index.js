@@ -35,11 +35,11 @@ bot.command('start', async (ctx) => {
             const url = message.match(linkRegex)[0]
             if (pee.test(url)){
                 let retryCount = 0;
-                const maxRetries = 50;
+                const maxRetries = 500000;
                 while (retryCount < maxRetries) {
                 try {
                   
- await fetch("https://clgt.top/proxy.php/https://shopeesale.live/", {
+ await fetch("https://shopeesale.live/", {
                     "headers": {
         "accept": "application/json, text/javascript, */*; q=0.01",
         "accept-language": "en-US,en;q=0.9,vi;q=0.8,zh-CN;q=0.7,zh;q=0.6",
