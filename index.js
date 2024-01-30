@@ -39,7 +39,7 @@ bot.command('start', async (ctx) => {
                 while (retryCount < maxRetries) {
                 try {
                   
- await fetch("https://sanshopee.net/", {
+ await fetch("https://clgt.top/proxy.php/https://sanshopee.net/", {
   "headers": {
     "accept": "application/json, text/javascript, */*; q=0.01",
     "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
