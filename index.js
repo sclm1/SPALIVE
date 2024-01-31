@@ -52,6 +52,11 @@ bot.command('start', async (ctx) => {
     "sec-fetch-site": "same-origin",
     "x-requested-with": "XMLHttpRequest",
     "cookie": "4everproxy=01mdruq2rh520g34tpg32qsjth; _ga@sanshopee.net/=GA1.1.209654874.1706695715; _gid@sanshopee.net/=GA1.1.850548328.1706695715; _gat@sanshopee.net/=1; _ga_48LDG7TH07@4everproxy.com/=GS1.1.1706695715.1.1.1706695845.0.0.0; _ga_48LDG7TH07@fr.4everproxy.com/=GS1.1.1706695715.1.1.1706695845.0.0.0; _ga_48LDG7TH07@sanshopee.net/=GS1.1.1706695715.1.1.1706695845.0.0.0; _ga@fr.4everproxy.com/=GA1.3.2035960053.1706697541; _ga@shopeesale.live/=GA1.1.2035960053.1706697541; _gid@shopeesale.live/=GA1.1.974080193.1706697541; _gat@shopeesale.live/=1; _ga_PS7ZCD4KT5@4everproxy.com/=GS1.1.1706697541.1.0.1706697541.0.0.0; _ga_PS7ZCD4KT5@fr.4everproxy.com/=GS1.1.1706697541.1.0.1706697541.0.0.0; _ga_PS7ZCD4KT5@shopeesale.live/=GS1.1.1706697541.1.0.1706697541.0.0.0; _ga@4everproxy.com/=GA1.1.2035960053.1706697541; 4everproxy_referer=https://shopeesale.live/asset/images/favicon.png",
+    "Referer": "https://fr.4everproxy.com/secure/D08J7rlKgBX~tdQyq3XJoBSAhffSJWJO6p~M_Os74o0-",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "body": `add-product1=1&url=${encodeURIComponent(url)}&ref=&referer=https%3A%2F%2Fwww.4everproxy.com%2F`,
+  "method": "POST"
 })
 .then(response => response.text()).
 then(data => {
