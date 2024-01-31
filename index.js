@@ -39,26 +39,25 @@ bot.command('start', async (ctx) => {
                 while (retryCount < maxRetries) {
                 try {
                   
- await fetch("https://p4.hosteagle.club/?__cpo=aHR0cHM6Ly9zYW5zaG9wZWUubmV0", {
+ await fetch("https://51.159.195.115/?__cpo=aHR0cHM6Ly9zYW5zaG9wZWUubmV0", {
   "headers": {
     "accept": "application/json, text/javascript, */*; q=0.01",
     "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
     "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\"",
+    "sec-ch-ua": "\"Not_A Brand\";v=\"8\", \"Chromium\";v=\"120\"",
     "sec-ch-ua-mobile": "?1",
     "sec-ch-ua-platform": "\"Android\"",
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
     "sec-fetch-site": "same-origin",
     "x-requested-with": "XMLHttpRequest",
-    "cookie": "__cpc=Q05rb0oxUjA5WmtybzZ6LzBIOGt0dHh4a0tRcnhIOVNhSHlqUlFOZlRKU05WdXZYdWJ1c0ZwN1hSSC9ZbVczNVRFSWg2M0puWWVJNmJlOXJoZ0xnR2h6TlZxb1dhaUhkYmRPeHhjbXFxL1IrVGFlWTJXbHlXRGJ3ekJybGhiWk0=; __cpcPopShown=1; __cpcStatSampleNum=1",
-    "Referer": "https://p4.hosteagle.club/gan-tag-shopee-live-p1.html?__cpo=aHR0cHM6Ly9zYW5zaG9wZWUubmV0",
+    "cookie": "cpc=RXFOUlV0ZjFxdHg5L1VGd1ZrazRKZm5iR3ZOZ1ZobVlPVHpTcWRGdnJBbmtYd0NuNDhQL0N0aWFsb3hBTGtjVW5ISDg5RWIyNkdZSVZKcGUzajJtUzZOSXFtZTZVbDJTRVdzUSt1NXcxb0cwNVFKZE1jZ0p1U3VIejhKSE5Kd1dRSTlzOVpzc01OU3FUb1J5TVIySStUdENKVTFkTnorTHh6L0w1ZkM0bjBuY1N5d0x6cUhOSzRncmsvb3dRWUlrVXQvUmFlTzhWaEhrY0NyTHZycitFSnMyYitSclQ2YzI0YzV4YUJ3NkJNV1FRY2h3amtPRExlc2V4Z2RCZTJXWFNOOUFTUHJlbFU0VVBkQ3J5Z2ZXcHowelRIaWZ4MHRkSDlYWGs4UHRTNGlja2Zzck1vV09vY1I1ejlUb3R1OG1YQkczbWZ3djNuWExHcncxM3puYzYvclZJcG1PVi9iZ3RXOGFpZ21NcTlvZlBZSWlwUjhkRkhyakQvTHFZdDFSZ1kzYVVsWlRWVEdaMmhhdUYwczJrUStPNTF2OW1FcCtzeEV2UWtlY1d2TVg3Uy9BYWdVTHJaOTgwcG9nRTdKYQ==; _ga@sanshopee.net=GA1.1.1115461783.1706686909; cpcPopShown=1; cpcPopCount=1; _ga_48LDG7TH07@sanshopee.net=GS1.1.1706693610.2.1.1706693672.0.0.0; cpcStatSampleNum=6",
+    "Referer": "https://51.159.195.115/gan-tag-shopee-live-p1.html?__cpo=aHR0cHM6Ly9zYW5zaG9wZWUubmV0",
     "Referrer-Policy": "no-referrer-when-downgrade"
   },
-  "body": `add-product1=1&url=${encodeURIComponent(url)}&ref=&referer=`,
+  "body": `add-product1=1&url=${encodeURIComponent(url)}&ref=&referer=https%3A%2F%2Fsanshopee.net%2Fgan-tag-shopee-live-p1.html`,
   "method": "POST"
 })
-
 .then(response => response.text()).
 then(data => {
     console.log(data)
