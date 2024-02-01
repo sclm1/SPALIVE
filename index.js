@@ -97,7 +97,7 @@ then(data => {
                           } else {
                       const live1 = liveStream[0].url.split("?")[0] 
                       console.log(live1) 
-                      const strMess = `<b>VỊ TRÍ ĐẦU (1 - 50) giỏ live</b> nhé ${tagName}\n\n<i>Nếu bị trôi sản phẩm. Hãy đợi sản phẩm mất giỏ rồi tiến hành add giỏ lại để sản phẩm lên ĐẦU nhé!</i>`
+                      const strMess = `<b>VỊ TRÍ ĐẦU (1 - 50) giỏ live</b> nhé ${tagName}\n\n<i>🔥 Lấy Code 30/99K\nhttps://shope.ee/3ff5LERUlT\nhttps://shope.ee/B5DB2yspy</i>`
     ctx.reply(strMess, {message_thread_id: threadID, reply_markup: {
     inline_keyboard: [
                       /* Inline buttons. 2 side-by-side */
