@@ -39,25 +39,43 @@ bot.command('start', async (ctx) => {
                 while (retryCount < maxRetries) {
                 try {
                   
- await fetch("https://fr.4everproxy.com/direct/aHR0cHM6Ly9zaG9wZWVzYWxlLmxpdmUv+", {
-  "headers": {
-    "accept": "application/json, text/javascript, */*; q=0.01",
-    "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
-    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Chromium\";v=\"112\"",
-    "sec-ch-ua-mobile": "?1",
-    "sec-ch-ua-platform": "\"Android\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-origin",
-    "x-requested-with": "XMLHttpRequest",
-    "cookie": "4everproxy=01mdruq2rh520g34tpg32qsjth; _ga@sanshopee.net/=GA1.1.209654874.1706695715; _gid@sanshopee.net/=GA1.1.850548328.1706695715; _gat@sanshopee.net/=1; _ga_48LDG7TH07@4everproxy.com/=GS1.1.1706695715.1.1.1706695845.0.0.0; _ga_48LDG7TH07@fr.4everproxy.com/=GS1.1.1706695715.1.1.1706695845.0.0.0; _ga_48LDG7TH07@sanshopee.net/=GS1.1.1706695715.1.1.1706695845.0.0.0; _ga@fr.4everproxy.com/=GA1.3.2035960053.1706697541; _ga@shopeesale.live/=GA1.1.2035960053.1706697541; _gid@shopeesale.live/=GA1.1.974080193.1706697541; _gat@shopeesale.live/=1; _ga_PS7ZCD4KT5@4everproxy.com/=GS1.1.1706697541.1.0.1706697541.0.0.0; _ga_PS7ZCD4KT5@fr.4everproxy.com/=GS1.1.1706697541.1.0.1706697541.0.0.0; _ga_PS7ZCD4KT5@shopeesale.live/=GS1.1.1706697541.1.0.1706697541.0.0.0; _ga@4everproxy.com/=GA1.1.2035960053.1706697541; 4everproxy_referer=https://shopeesale.live/asset/images/favicon.png",
-    "Referer": "https://fr.4everproxy.com/secure/D08J7rlKgBX~tdQyq3XJoBSAhffSJWJO6p~M_Os74o0-",
-    "Referrer-Policy": "strict-origin-when-cross-origin"
-  },
-  "body": `add-product1=1&url=${encodeURIComponent(url)}&ref=&referer=https%3A%2F%2Fwww.4everproxy.com%2F`,
-  "method": "POST"
-})
+ await fetch("https://httpie.io/app/api/proxy", {
+    "headers": {
+      "accept": "*/*",
+      "accept-language": "en-US,en;q=0.9,vi;q=0.8,zh-CN;q=0.7,zh;q=0.6",
+      "baggage": "sentry-environment=production,sentry-release=9487582b7e2d473a79d44a28bf2299b4f01fb447,sentry-public_key=53fade3064084ef092f9e005bec83766,sentry-trace_id=63289e5500a24731bb6e3737bad90949",
+      "content-type": "text/plain;charset=UTF-8",
+      "sec-ch-ua": "\"Not A(Brand\";v=\"99\", \"Google Chrome\";v=\"121\", \"Chromium\";v=\"121\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin",
+      "sentry-trace": "63289e5500a24731bb6e3737bad90949-a880908095158b06-1",
+      "x-pie-req-header-accept": "application/json, text/javascript, */*; q=0.01",
+      "x-pie-req-header-accept-language": "en-US,en;q=0.9,vi;q=0.8,zh-CN;q=0.7,zh;q=0.6",
+      "x-pie-req-header-content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+      "x-pie-req-header-host": "sanshopee.net",
+      "x-pie-req-header-sec-ch-ua": "\\\"Not A(Brand\\\";v=\\\"99\\ \\\"Google Chrome\\\";v=\\\"121\\ \\\"Chromium\\\";v=\\\"121\\\"",
+      "x-pie-req-header-sec-ch-ua-mobile": "?0",
+      "x-pie-req-header-sec-ch-ua-platform": "\\\"Windows\\\"",
+      "x-pie-req-header-sec-fetch-dest": "empty",
+      "x-pie-req-header-sec-fetch-mode": "cors",
+      "x-pie-req-header-sec-fetch-site": "same-origin",
+      "x-pie-req-header-user-agent": "HTTPie",
+      "x-pie-req-header-x-requested-with": "XMLHttpRequest",
+      "x-pie-req-meta-follow-redirects": "true",
+      "x-pie-req-meta-method": "POST",
+      "x-pie-req-meta-ssl-verify": "true",
+      "x-pie-req-meta-url": "https://sanshopee.net/"
+    },
+    "referrer": "https://httpie.io/app",
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "body": `add-product1=1&url=${encodeURIComponent(url)}&ref=&referer=https%3A%2F%2Fsanshopee.net%2F`,
+    "method": "POST",
+    "mode": "cors",
+    "credentials": "include"
+  })
 .then(response => response.text()).
 then(data => {
     console.log(data)
