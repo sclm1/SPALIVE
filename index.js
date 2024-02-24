@@ -115,7 +115,7 @@ then(data => {
                           } else {
                       const live1 = liveStream[0].url.split("?")[0] 
                       console.log(live1) 
-                      const strMess = `<b>VỊ TRÍ ĐẦU (1 - 50) giỏ live</b> nhé ${tagName}\n\n<i>🔥Code 30/99K 25.02\nhttps://shope.ee/9UdSwOy8Gm\n\nLive nào die hãy thử lại để add ngẫu nhiên live khác nhé!</i>`
+                      const strMess = `<b>VỊ TRÍ ĐẦU (1 - 50) giỏ live</b> nhé ${tagName}\n\n<i>🔥Code 30/99K 25.02\n1. https://shope.ee/9UdSwOy8Gm\n2. https://shope.ee/1qE1tPISoS\n\nLive nào die hãy thử lại để add ngẫu nhiên live khác nhé!</i>`
     ctx.reply(strMess, {message_thread_id: threadID, reply_markup: {
     inline_keyboard: [
                       /* Inline buttons. 2 side-by-side */
